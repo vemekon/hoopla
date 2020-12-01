@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+    color: wheat;
+}
+body{
+    background-image: url('https://images.unsplash.com/photo-1591722889177-6ffb26217af4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    height:13vh;
+    padding: 2rem 0rem;
+    
+}
+header .logo{
+    font-size: 2rem;
+    margin: 0rem 1.5rem;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+ul li{
+    margin-right: 1rem;
+}
+ul li:last-child{
+    margin-left: 5.5rem;
+}
+ul li a{
+    font-size: 1.3rem;
+    padding: 8px 10px;
+
+}
+ul li a:active,
+ul li a:hover{
+    background-color: gray;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.hamburger{
+    position: absolute;
+    right:1.5rem;
+    width: 25px;
+    flex-direction: column;
+
+    
+    height : 20px;
+    justify-content: space-between;
+    display: none;
+}
+.hamburger .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .hamburger{
+      display: flex;
+      cursor: pointer;
+    }
+    ul{
+        flex-direction: column;
+        position: absolute;
+        top:14vh;
+        right: -100%;
+        background-color: rgba(0,0,0,0.7);
+        height: 86vh;
+        width:100%;
+        align-items: center;
+        transition: right 0.2s ease-in;
+        
+    }
+    ul li{
+        margin-right: 0px;
+    }
+    ul li:last-child{
+        margin-left: 0;
+    }
+    .menu-slide{
+        right:0px;
+        
+    }
+    .cross .bar:nth-child(2){
+        opacity: 0;
+    }
+    .cross .bar:first-child{
+        transform: rotate(-45deg) translate(-5px , 7px);
+    }
+    .cross .bar:last-child{
+        transform: rotate(45deg) translate(-5px , -7px);
+    }
+  }
